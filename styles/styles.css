@@ -13,6 +13,10 @@ body {
     color: white;
 }
 
+header {
+    position: fixed;
+}
+
 .nav-bar-heading {
     font-size: 1.75em;
     padding-top: 0.3125rem;
@@ -41,6 +45,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 6rem 0;
+    padding-top: 9.65rem;
     width: 100%;
     background-color: rgb(26, 188, 156) ;
 }
@@ -339,6 +344,10 @@ body {
     }
     .form {
         width: 90%;
+    }
+
+    .hero{
+        padding: 6rem 0;
     }
 
     body{
