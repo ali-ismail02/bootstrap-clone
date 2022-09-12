@@ -269,6 +269,62 @@ header {
     margin: 0;
 }
 
+a.btn{
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    padding: 0.75px 0.75px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+a.btn-social {
+    border: 1px solid white;
+    border-radius: 100%;
+    display: inline-flex;
+    width: 3.25rem;
+    height: 3.25rem;
+    font-size: 1.25rem;
+    justify-content: center;
+    align-items: center;
+}
+a.mx-1 {
+    margin-right: 0.25rem !important;
+    margin-left: 0.25rem !important;
+}
+a.btn-outline-light {
+    border: 2px solid;
+    color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+a:hover{
+    background-color: white;
+} 
+a:hover .path-fill{
+	fill:black;
+}
+a.btn-outline-light:focus {
+    box-shadow: 0 0 0 0.25rem rgb(248 249 250 / 50%);
+}
+.fa-fw {
+    text-align: center;
+    width: 1.25em;
+}
+.svg-inline--fa {
+    display: var(--fa-display,inline-block);
+    height: 1em;
+    vertical-align: -0.125em;
+}
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
 /* copyright */
 
 .copyright {
