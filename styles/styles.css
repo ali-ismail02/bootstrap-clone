@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1.5rem 0;
-    width: 100vw;
+    width: 100%;
     background-color: rgb(44, 62, 88);
     color: white;
 }
@@ -40,7 +40,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 6rem 0;
-    width: 100vw;
+    width: 100%;
     background-color: rgb(26, 188, 156) ;
 }
 
@@ -97,7 +97,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
 }
 
 .port-heading {
@@ -136,7 +136,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 6rem 0;
-    width: 100vw;
+    width: 100%;
     background-color: rgb(26, 188, 156) ;
 }
 
@@ -186,7 +186,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 6rem 0;
-    width: 100vw;
+    width: 100%;
 }
 
 .contact-me-heading {
@@ -225,6 +225,43 @@ body {
     border-radius: 0.5rem;
 }
 
+/* footer */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+    width: 100%;
+    background-color: rgb(44, 62, 88);
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 31%;
+}
+
+.footer-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem !important;
+    margin-top: 0;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.footer-text {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
 /* utilities */
 
 .container {
@@ -242,4 +279,8 @@ body {
 
 .color-black{
     background-color:black;
+}
+
+.fill-black {
+    fill: black;
 }
