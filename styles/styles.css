@@ -11,6 +11,7 @@ body {
     width: 100%;
     background-color: rgb(44, 62, 88);
     color: white;
+    transition: 0.3s;
 }
 
 header {
@@ -236,7 +237,6 @@ header {
 
 .footer {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 5rem 0;
@@ -314,6 +314,7 @@ header {
     justify-content: space-between;
     flex-wrap: inherit;
     align-items: center;
+    flex-grow: 1;
 }
 
 .flex-col {
@@ -409,6 +410,10 @@ header {
     }
     .container {
         max-width: 100%;
+        flex-direction: column;
+    }
+
+    .footer {
         flex-direction: column;
     }
     .footer-item {

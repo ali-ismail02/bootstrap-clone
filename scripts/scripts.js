@@ -74,3 +74,18 @@ for(let i = 0;i<buttons.length; i++){
 button.addEventListener('click', ()=> {
     popup.classList.remove('popup-display')
 })
+
+
+// scroll control 
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar-heading").style.fontSize = "1.25rem";
+    document.getElementById("navbar").style.padding = "0";
+  } else {
+    document.getElementById("navbar-heading").style.fontSize = "1.75rem";
+    document.getElementById("navbar").style.padding = "1.5rem 0";
+  }
+}
