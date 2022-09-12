@@ -103,6 +103,7 @@ body {
 .port-heading {
     font-size: 3rem;
     line-height: 2.5rem;
+    margin: 0 0;
 }
 
 .port-items {
@@ -175,6 +176,53 @@ body {
 .about-button:hover {
     background-color: white;
     color: black;
+}
+
+/* CONTACT ME */
+
+.contact-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 0;
+    width: 100vw;
+}
+
+.contact-me-heading {
+    font-size: 3rem;
+    line-height: 2.5rem;
+    margin: 0 0;
+}
+
+.form {
+    width: 58%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-me-input {
+    margin-bottom: 1rem !important;
+    font-size: 1.5rem;
+    border: 0px;
+    border-bottom: 1px solid rgb(161, 161, 161);
+    width: 100%;
+    height: 5.5rem;
+    line-height: 1.5rem;
+    padding: 1.5rem 0;
+}
+
+.form-button {
+    color: #fff;
+    background-color: #1abc9c;
+    border: 0px;
+    padding: 1rem 1.75rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    align-self: flex-start;
+    border-radius: 0.5rem;
 }
 
 /* utilities */
