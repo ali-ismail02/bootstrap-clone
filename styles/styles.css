@@ -129,7 +129,8 @@ header {
 }
 
 .port-img {
-    width: 400px;
+    min-width: 200px;
+    flex-grow: 1;
     height: auto;    
     max-width: 25rem;
 }
@@ -202,7 +203,7 @@ header {
 }
 
 .form {
-    width: 58%;
+    width: 58vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -284,15 +285,36 @@ header {
     margin: 0;
 }
 
+/* status */
+
+.status {
+    display: none;
+}
+
+.status-text {
+    color: white;
+    font-size: 0.875em;
+    margin: 0;
+    text-align: center;
+}
+
+.status-display {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+    background-color: #1a252f;
+}
+
 /* utilities */
 
 .container {
-    max-width: 68.75%;
+    flex-basis: 68.75%;
     display: flex;
     justify-content: space-between;
     flex-wrap: inherit;
     align-items: center;
-    width: 100%;
+    max-width: 100%;
 }
 
 .flex-col {
