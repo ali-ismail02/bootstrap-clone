@@ -49,3 +49,28 @@ const messageCheck = (input) => {
     return input.match(pattern)
 }
 
+// popup control
+
+const buttons = document.querySelectorAll(".port-item")
+const heading = document.getElementById("popup-heading")
+const image = document.getElementById("popup-img")
+const popup = document.getElementById('popup')
+const button = document.getElementById('popup-button')
+const body = document.getElementById('body')
+
+
+const popupImg = (i) => {
+    image.innerHTML = `<img src='images/${i+1}.png' class="popup-img">`
+}
+
+for(let i = 0;i<buttons.length; i++){
+    buttons[i].addEventListener("click", () => {
+        popupImg(i)
+        popup.classList.add("popup-display")
+        heading.innerHTML = "Heading"
+    })
+}
+
+button.addEventListener('click', ()=> {
+    popup.classList.remove('popup-display')
+})
