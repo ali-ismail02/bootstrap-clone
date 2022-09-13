@@ -14,12 +14,28 @@ function scrollFunction() {
 }
 
 // get api 
+const review = document.getElementById("reviews")
 
-const reviews = () => { // fetches random dog photo
-    fetch(`https://dog.ceo/api/breeds/image/random`
+const addElement = (text, className, type) => {  // function to create elements and append them
+    let heading = document.createElement(type)
+    heading.classList.add(className)
+    heading.innerHTML = text
+    review.appendChild(heading)
+}
+
+const reviews = () => { // fetches review rows
+    fetch(`http://localhost/reviews/review-select.php`
     ).then(response =>{
         return response.json()
     }).then(json => { 
-        dogPhoto.innerHTML = `<img src="${json.message}" style="height: 35vh; max-width: 100%"></img>`
+        json.forEach(element => {
+            addElement(`Name: ${element.name}`, "reviewer-info", "h3")
+            addElement(`Email: ${element.email}`, "reviewer-info", "h3")
+            addElement(`Phone: ${element.phone}`, "reviewer-info", "h3")
+            addElement(`<b>Message: </b>${element.message}`, "reviewer-message", "p")
+            addElement(``, "review-line", "div")
+        })
     })
 }
+
+reviews()
