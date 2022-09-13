@@ -62,7 +62,7 @@ const insertToDb = (fullName, email, phone, message) => {
         }),
         }).then(response => response.json()
         ).then(json => {
-            statusText.innerHTML = json['success']
+            statusText.innerHTML = "Request submitted"
         })
 }
 
