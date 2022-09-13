@@ -10,12 +10,13 @@ const statusDiv = document.getElementById("status-div")
 
 submit.addEventListener("click",() => {
     let nameChecked = checkName(fullName.value)
-    let emailChecked = checkEmail(email.value)
-    let phoneChecked = checkPhone(phone.value)
-    let messageChecked = messageCheck(message.value)
+    let emailChecked =checkEmail(email.value)
+    let phoneChecked =checkPhone(phone.value)
+    let messageChecked =messageCheck(message.value)
     statusDiv.classList.add("status-display")
     statusText.innerHTML = ""
-    if(nameChecked && emailChecked && phoneChecked && messageChecked) {statusText.innerHTML = "All Good"
+    if(nameChecked && emailChecked && phoneChecked && messageChecked) {
+        insertToDb(fullName.value, email.value, phone.value, message.value)
     }else {
         if(!nameChecked) statusText.innerHTML = statusText.innerHTML + "Name format incorrect<br>"
         if(!emailChecked) statusText.innerHTML = statusText.innerHTML + "Email format incorrect<br>"
@@ -34,7 +35,7 @@ const checkName = (input) => {
 }
 
 const checkEmail = (input) => {
-    let pattern = /\w{3,}@\w{5,}/
+    let pattern = /.{3,}@.{5,}/
     console.log(input)
     return input.match(pattern)
 }
@@ -47,6 +48,22 @@ const checkPhone = (input) => {
 const messageCheck = (input) => {
     let pattern = /.{100,}/
     return input.match(pattern)
+}
+
+const insertToDb = (fullName, email, phone, message) => {
+    fetch(`http://localhost/reviews/review-insert.php`
+    , {
+        method: 'POST', 
+        body:new URLSearchParams({
+          "name":fullName,
+          "email":email,
+          "phone":phone,
+          "message":message,    
+        }),
+        }).then(response => response.json()
+        ).then(json => {
+            statusText.innerHTML = json['success']
+        })
 }
 
 // popup control
@@ -89,3 +106,4 @@ function scrollFunction() {
     document.getElementById("navbar").style.padding = "1.5rem 0";
   }
 }
+
