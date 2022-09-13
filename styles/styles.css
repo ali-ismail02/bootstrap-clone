@@ -458,6 +458,36 @@ a.btn-outline-light:focus {
     margin-bottom: 3rem;
 }
 
+
+
+/* reviews page ------------------------------------------------------------------------- */
+
+.review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    margin: 1rem 0;
+    max-width: 100%;
+    flex-grow: 1;
+}
+
+.reviewer-name {
+    font-size: 1.5rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    max-width: 100%;
+    flex-grow: 1;
+}
+
+.reviewer-message {
+    font-size: 1.25rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    max-width: 100%;
+    flex-grow: 1;
+}
+
 /* media queries */
 
 @media screen and (max-width:800px) {
